@@ -1,5 +1,3 @@
-# encriptacion
-
 # Encriptación
 
 ## Instalación de la librería de criptografía
@@ -9,14 +7,16 @@ Para instalar la librería de criptografía, corra lo siguiente:
 pip install cryptography
 
 
-## ejecutar el programa: python script.py encrypt <path-de-la-imagen>
+## ejecutar el programa (sin comillas en los paths ni clave): 
+### python script.py encrypt "path-de-la-imagen"
 
 
 
-# Para desencriptar: python script.py decrypt <path-de-la-imagen> --key <tu-clave>
+## Para desencriptar: 
+### python script.py decrypt "path-de-la-imagen" --key "tu-clave"
 
 
-### Notas:
+## Notas:
 
 El script verifica si el archivo proporcionado es una imagen válida antes de realizar la encriptación.
 La clave de encriptación se genera de manera aleatoria para cada encriptación, lo que mejora la seguridad en comparación con el uso de una clave fija.
@@ -46,9 +46,9 @@ Básicamente Utiliza el algoritmo AES, que es altamente confiable, y genera clav
 
 "Advanced Encryption Standard (AES) es uno de los algoritmos de cifrado más utilizados y seguros actualmente disponibles. Es de acceso público, y es el cifrado que la NSA utiliza para asegurar documentos con la clasificación "top secret". Su historia de éxito se inició en 1997, cuando el NIST (Instituto Nacional de Estándares y Tecnología) comenzó oficialmente a buscar un sucesor al envejecimiento cifrado estándar DES. Un algoritmo llamado "Rijndael", desarrollado por los criptografistas belgas Daemen y Rijmen, sobresalía tanto en seguridad como en rendimiento y flexibilidad."
 
-Referencias:
-# https://cryptography.io/en/latest/hazmat/primitives/symmetric-encryption/ 
-# https://www.boxcryptor.com/es/encryption/ 
+# Referencias:
+## https://cryptography.io/en/latest/hazmat/primitives/symmetric-encryption/ 
+## https://www.boxcryptor.com/es/encryption/ 
 
 
 
