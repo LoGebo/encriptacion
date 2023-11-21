@@ -4,14 +4,15 @@ import os
 
 try:
     # Ruta del archivo de imagen
-    path = "01.png"
+    path = "11.jpg"   # aqui ponga el path profe
 
     # Clave de cifrado generada de manera segura
     key = os.urandom(32)  # Clave AES de 256 bits (basada)
-
+    iv = os.urandom(16)    
     # Imprimir la ruta del archivo y la clave de cifrado
     print('The path of file : ', path)
     print('Key for encryption : ', key)
+    print("el iv papu", iv)
 
     # Leer los datos de la imagen
     with open(path, 'rb') as fin:
@@ -22,9 +23,10 @@ try:
     encryptor = cipher.encryptor()
     encrypted_image = encryptor.update(image_data) + encryptor.finalize()
 
-    # Guardar la imagen cifrada en un nuevo archivo
+    # Guardar la imagen cifrada en un nuevo archivo siuuuuuuuu
     encrypted_path = path + ".enc"
     with open(encrypted_path, 'wb') as fout:
+        fout.write(iv)  # Escribe el IV al comienzo del archivo pa poderlo buscar despues
         fout.write(encrypted_image)
 
     print('Encryption Done. Encrypted file:', encrypted_path)
